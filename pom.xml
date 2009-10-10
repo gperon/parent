@@ -56,7 +56,7 @@
             -->
                 <executions>
                     <execution>
-                        <id>svn_commit</id>
+                        <id>git_commit</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>checkin</goal>
