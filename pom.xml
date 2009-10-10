@@ -63,6 +63,7 @@
                         </goals>
                         <configuration>
                             <message>Automatically generated build id</message>
+                            <developerConnectionUrl>scm:git:file://c:/lavoro/repot/parent.git</developerConnectionUrl>
                         <!--
                         <workingDirectory>${SVN_WORKINGDIRECTORY__PV50}</workingDirectory>
                         -->
