@@ -8,9 +8,11 @@
     <name>parent</name>
     <url>http://maven.apache.org</url>
     <scm>
-        <connection>scm:git:file://c:/tmp/repot/parent.git</connection>
-        <developerConnection>scm:git:file://c:/tmp/repot/parent.git</developerConnection>
+        <connection>scm:git:file://c:/lavoro/repot/parent.git</connection>
+        <developerConnection>scm:git:file://c:/lavoro/repot/parent.git</developerConnection>
+        <!--
         <url>http://somerepository.com/view.cvs</url>
+        -->
     </scm>
     <modules>
         <module>api</module>
@@ -67,6 +69,16 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!--
+                <version>2.4.1</version>
+                -->
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
             </plugin>
         <!--
             <plugin>
