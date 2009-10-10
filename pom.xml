@@ -56,7 +56,7 @@
             -->
                 <executions>
                     <execution>
-                        <id>git_commit</id>
+                        <id>git-commit</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>checkin</goal>
