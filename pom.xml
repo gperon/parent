@@ -10,9 +10,7 @@
     <scm>
         <connection>scm:git:file://c:/lavoro/repot/parent.git</connection>
         <developerConnection>scm:git:file://c:/lavoro/repot/parent.git</developerConnection>
-        <!--
         <url>http://somerepository.com/view.cvs</url>
-        -->
     </scm>
     <modules>
         <module>api</module>
