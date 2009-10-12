@@ -39,19 +39,16 @@
     </distributionManagement>
     <build>
         <plugins>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
-            <!--
             <version>1.2</version>
-            -->
-            <!--
             <configuration>
                 <username>${SVN_USERNAME}</username>
                 <password>${SVN_PASSWORD}</password>
                 <developerConnectionUrl>${SVN_CONNECTIONURL}</developerConnectionUrl>
             </configuration>
-            -->
                 <executions>
                     <execution>
                         <id>git-commit</id>
@@ -62,13 +59,12 @@
                         <configuration>
                             <message>Automatically generated build id</message>
                             <developerConnectionUrl>scm:git:file://c:/lavoro/repot/parent.git</developerConnectionUrl>
-                        <!--
                         <workingDirectory>${SVN_WORKINGDIRECTORY__PV50}</workingDirectory>
-                        -->
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
