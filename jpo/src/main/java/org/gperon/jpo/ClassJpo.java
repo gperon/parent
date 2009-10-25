@@ -10,5 +10,8 @@ package org.gperon.jpo;
  * @author GiorgioP
  */
 public class ClassJpo {
+    public static void main(String[] args) {
+        System.out.println("Hello Giorgio");
+    }
 
 }
