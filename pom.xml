@@ -16,7 +16,7 @@
         <module>api</module>
         <module>jpo</module>
         <module>webapp</module>
-    </modules>
+  </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
