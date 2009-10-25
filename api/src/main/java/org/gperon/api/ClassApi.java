@@ -20,5 +20,8 @@ public class ClassApi {
         System.out.println(msg);
     }
 
+    private void hello(String msg) {
+        System.out.println("msg: " + msg);
+    }
 
 }
