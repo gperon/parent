@@ -23,6 +23,10 @@ public class ClassApi {
         System.out.println("msg: " + msg);
     }
 
+    private void a(String msg) {
+        System.out.println("a");
+    }
+
     private void d(String msg) {
         System.out.println("d");
     }
