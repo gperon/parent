@@ -49,4 +49,8 @@ public class ClassJpo {
     public void d(String[] args) {
         System.out.println("d");
     }
+
+    public void e(String[] args) {
+        System.out.println("e");
+    }
 }
