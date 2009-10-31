@@ -26,4 +26,8 @@ public class ClassApi {
     private void d(String msg) {
         System.out.println("d");
     }
+
+    private void e(String msg) {
+        System.out.println("e");
+    }
 }
