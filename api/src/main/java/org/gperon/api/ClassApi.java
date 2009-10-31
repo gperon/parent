@@ -1,6 +1,12 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * @(#)ClassApi.java   2009-10-31
+ *
+ * Copyright (c) 2005-2010 Luxottica Group
+ * All Rights Reserved.
+ * This program contains proprietary and trade secret information of Luxottica Group.
+ *
+ *
+ *
  */
 package org.gperon.api;
 
@@ -10,8 +16,15 @@ package org.gperon.api;
  */
 public class ClassApi {
 
+    /**
+     * Method description
+     *
+     *
+     * @param args
+     */
     public static void main(String[] args) {
-        /* modifica 1*/
+
+        /* modifica 1 */
         printMessage("Hello world!");
     }
 
@@ -25,6 +38,10 @@ public class ClassApi {
 
     private void a(String msg) {
         System.out.println("a");
+    }
+
+    private void b(String msg) {
+        System.out.println("b");
     }
 
     private void d(String msg) {
