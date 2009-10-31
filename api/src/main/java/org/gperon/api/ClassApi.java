@@ -12,7 +12,15 @@ package org.gperon.api;
 public class ClassApi {
     public static void main(String[] args) {
         /* modifica 1*/
-        System.out.println("hello world!");
+        printMessage("Hello world!");
+    }
+
+    private static void printMessage(String msg) {
+        System.out.println(msg);
+    }
+
+    private void hello(String msg) {
+        System.out.println("msg: " + msg);
     }
 
 }
