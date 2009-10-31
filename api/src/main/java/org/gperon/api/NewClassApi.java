@@ -13,4 +13,8 @@ public class NewClassApi {
     private void a(String msg) {
         System.out.println("a");
     }
+
+    private void b(String msg) {
+        System.out.println("b");
+    }
 }
