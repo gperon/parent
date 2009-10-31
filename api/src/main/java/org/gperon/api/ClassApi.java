@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.gperon.api;
 
 /**
@@ -10,6 +9,7 @@ package org.gperon.api;
  * @author GiorgioP
  */
 public class ClassApi {
+
     public static void main(String[] args) {
         /* modifica 1*/
         printMessage("Hello world!");
@@ -23,4 +23,7 @@ public class ClassApi {
         System.out.println("msg: " + msg);
     }
 
+    private void d(String msg) {
+        System.out.println("d");
+    }
 }
