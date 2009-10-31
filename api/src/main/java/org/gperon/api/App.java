@@ -17,4 +17,8 @@ public class App {
     public void x(String[] args) {
         System.out.println("x");
     }
+
+    public void y(String[] args) {
+        System.out.println("y");
+    }
 }
