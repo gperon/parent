@@ -13,4 +13,8 @@ public class App {
     public void w(String[] args) {
         System.out.println("w");
     }
+
+    public void x(String[] args) {
+        System.out.println("x");
+    }
 }
