@@ -37,4 +37,8 @@ public class ClassJpo {
     public void a(String[] args) {
         System.out.println("a");
     }
+
+    public void b(String[] args) {
+        System.out.println("b");
+    }
 }
