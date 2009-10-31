@@ -21,4 +21,8 @@ public class App {
     public void y(String[] args) {
         System.out.println("y");
     }
+
+    public void z(String[] args) {
+        System.out.println("z");
+    }
 }
