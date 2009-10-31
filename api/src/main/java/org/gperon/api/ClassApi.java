@@ -52,11 +52,11 @@ public class ClassApi {
         System.out.println("d");
     }
 
-    private void f(String msg) {
-        System.out.println("f");
-    }
-
     private void g(String msg) {
         System.out.println("g");
+    }
+
+    private void f(String msg) {
+        System.out.println("f");
     }
 }
