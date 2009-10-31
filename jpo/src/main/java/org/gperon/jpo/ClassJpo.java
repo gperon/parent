@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.gperon.jpo;
 
 /**
@@ -35,5 +34,7 @@ public class ClassJpo {
         System.out.println("Hello Giorgio");
     }
 
-
+    public void a(String[] args) {
+        System.out.println("a");
+    }
 }
