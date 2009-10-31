@@ -30,4 +30,8 @@ public class ClassApi {
     private void e(String msg) {
         System.out.println("e");
     }
+
+    private void f(String msg) {
+        System.out.println("f");
+    }
 }
