@@ -17,4 +17,8 @@ public class CertClassApi {
     private void y(String msg) {
         System.out.println("y");
     }
+
+    private void z(String msg) {
+        System.out.println("z");
+    }
 }
