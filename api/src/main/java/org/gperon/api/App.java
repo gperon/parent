@@ -25,4 +25,12 @@ public class App {
     public void z(String[] args) {
         System.out.println("z");
     }
+
+    public void p(String[] args) {
+        System.out.println("p");
+    }
+
+    public void q(String[] args) {
+        System.out.println("q");
+    }
 }
