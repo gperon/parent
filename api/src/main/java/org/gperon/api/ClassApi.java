@@ -44,6 +44,10 @@ public class ClassApi {
         System.out.println("b");
     }
 
+    private void c(String msg) {
+        System.out.println("c");
+    }
+
     private void d(String msg) {
         System.out.println("d");
     }
