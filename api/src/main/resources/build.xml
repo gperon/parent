@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+
+<project default="replace">
+    <taskdef resource="net/sf/antcontrib/antlib.xml" />
+    <property name="dir" value="c:/tmp/aaaa"></property>
+    <property name="dir.filter" value="${dir}/filter"></property>
+    <!--
+    questa macro toglie la riga "pos" dal file usando replace
+    -->
+    <macrodef name="remove-line-n">
+        <attribute name="file"/>
+        <attribute name="pos-1"/>
+        <sequential>
+            <var name="text.line" unset="true"/>
+            <loadfile srcfile="@{file}" property="text.line">
+                <filterchain>
+                    <headfilter lines="1" skip="@{pos-1}"/>
+                </filterchain>
+            </loadfile>
+            <echo message="${text.line}"/>
+            <!--
+            <replace file="@{file}" token="&lt;datetime&gt;2008-12-09T13:07:38Z&lt;/datetime&gt;" value="&lt;datetime&gt;&lt;/datetime&gt;"/>
+            <replace file="@{file}"  value="&lt;datetime&gt;&lt;/datetime&gt;">
+                <replacetoken>${text.line}</replacetoken>
+            </replace>
+            -->
+            <replace file="@{file}" token="${text.line}" value="&lt;datetime&gt;&lt;/datetime&gt;"/>
+        </sequential>
+    </macrodef>
+    <!--
+    questa macro toglie la riga "pos" dal file usando copy
+    -->
+    <macrodef name="remove-line-n-copy">
+        <attribute name="file"/>
+        <attribute name="pos-1"/>
+        <sequential>
+            <var name="text.line" unset="true"/>
+            <loadfile srcfile="@{file}" property="text.line">
+                <filterchain>
+                    <headfilter lines="1" skip="@{pos-1}"/>
+                </filterchain>
+            </loadfile>
+            <copy todir="${dir.filter}" file="@{file}" >
+                <filterchain>
+                    <linecontains negate="true">
+                        <contains value="${text.line}"/>
+                    </linecontains>
+                </filterchain>
+            </copy>
+        </sequential>
+    </macrodef>
+    <target name="remove-line">
+        <remove-line-n file="${dir}/role_luxplms.xml" pos-1="6" />
+    </target>
+<!--
+questo task lavora su un fileset per rimuovere una riga
+-->
+    <target name="remove-line-fileset-copy">
+        <for param="file">
+            <path>
+                <fileset dir="${dir}" includes="*.xml"/>
+            </path>
+            <sequential>
+                <remove-line-n-copy file="@{file}" pos-1="6" />
+            </sequential>
+        </for>
+    </target>
+<!--
+questo task lavora su un fileset per rimuovere una riga in place
+-->
+    <target name="remove-line-fileset">
+        <for param="file">
+            <path>
+                <fileset dir="${dir.filter}" includes="*.xml"/>
+            </path>
+            <sequential>
+                <remove-line-n file="@{file}" pos-1="6" />
+            </sequential>
+        </for>
+    </target>
+
+    <target name="replace">
+        <mkdir dir="${dir.filter}"/>
+        <delete dir="${dir.filter}" includes="*"/>
+        <loadfile srcfile="${dir}/role_luxplms.xml" property="datetime">
+            <filterchain>
+                <headfilter lines="1" skip="6"/>
+            </filterchain>
+        </loadfile>
+        <echo message="${datetime}"/>
+        <!--
+        si vuole copiare i file xml togliendo la riga 7, come si fa?
+        -->
+        <copy todir="${dir.filter}">
+            <fileset dir="${dir}" includes="*.xml"></fileset>
+
+            <filterchain>
+                <headfilter lines="1" skip="6"/>
+                <tailfilter lines="-1" skip="6"/>
+            <!--
+                <linecontains negate="true">
+                    <contains value="&lt;datetime&gt;"/>
+                    <contains value="&lt;/datetime&gt;"/>
+                </linecontains>
+                -->
+                <!--
+                <replacetokens begintoken="</release><datetime>" endtoken="</datetime><event>">
+                    <token key="DATE" value="${TODAY}" />
+                </replacetokens>
+                -->
+            </filterchain>
+        </copy>
+    </target>
+</project>
