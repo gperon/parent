@@ -16,6 +16,7 @@
             <loadfile srcfile="@{file}" property="text.line">
                 <filterchain>
                     <headfilter lines="1" skip="@{pos-1}"/>
+                    <striplinebreaks/>
                 </filterchain>
             </loadfile>
             <echo message="${text.line}"/>
@@ -24,8 +25,10 @@
             <replace file="@{file}"  value="&lt;datetime&gt;&lt;/datetime&gt;">
                 <replacetoken>${text.line}</replacetoken>
             </replace>
-            -->
             <replace file="@{file}" token="${text.line}" value="&lt;datetime&gt;&lt;/datetime&gt;"/>
+            -->
+
+            <replaceregexp file="@{file}" match="${text.line}" replace="&lt;datetime&gt;&lt;/datetime&gt;" />
         </sequential>
     </macrodef>
     <!--
@@ -51,7 +54,7 @@
         </sequential>
     </macrodef>
     <target name="remove-line">
-        <remove-line-n file="${dir}/role_luxplms.xml" pos-1="6" />
+        <remove-line-n file="${dir.filter}/role_luxplms.xml" pos-1="6" />
     </target>
 <!--
 questo task lavora su un fileset per rimuovere una riga
@@ -111,5 +114,6 @@ questo task lavora su un fileset per rimuovere una riga in place
                 -->
             </filterchain>
         </copy>
+
     </target>
 </project>
