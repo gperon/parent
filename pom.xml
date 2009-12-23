@@ -4,7 +4,7 @@
     <groupId>org.gperon</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.3</version>
+    <version>1.4-SNAPSHOT</version>
     <name>parent</name>
     <url>http://maven.apache.org</url>
     <scm>
