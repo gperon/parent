@@ -8,9 +8,9 @@
     <name>parent</name>
     <url>http://maven.apache.org</url>
     <scm>
-        <connection>scm:git:file://c:/lavoro/repot/parent.git</connection>
-        <developerConnection>scm:git:file://c:/lavoro/repot/parent.git</developerConnection>
-        <url>http://localhost/gitphp-0.0.8/index.php?p=parent.git</url>
+        <connection>scm:git:git://github.com/gperon/parent.git</connection>
+        <developerConnection>scm:git:git://github.com/gperon/parent.git</developerConnection>
+        <url>http://github.com/gperon/parent</url>
     </scm>
     <modules>
         <module>api</module>
